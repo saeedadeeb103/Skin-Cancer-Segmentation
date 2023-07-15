@@ -9,7 +9,7 @@ train_dataset = SegmentationDataset("Balloons-16/train/", feature_extractor)
 val_dataset = SegmentationDataset("Balloons-16/valid/", feature_extractor)
 test_dataset = SegmentationDataset("Balloons-16/test/", feature_extractor)
 
-batch_size = 16
+batch_size = 8
 train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=3, prefetch_factor=8)
 val_dataloader = DataLoader(val_dataset, batch_size=batch_size, num_workers=3, prefetch_factor=8)
 test_dataloader = DataLoader(test_dataset, batch_size=batch_size, num_workers=3, prefetch_factor=8)
